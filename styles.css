@@ -126,7 +126,7 @@ footer {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-}
+
 
 .carousel {
     display: flex;
@@ -152,4 +152,5 @@ footer {
     100% {
         transform: translateX(0);
     }
+}
 }
