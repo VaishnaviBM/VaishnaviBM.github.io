@@ -59,24 +59,29 @@ footer {
 }
 
 /* Contact Section Styles */
-.social-links {
-    margin-top: 10px;
+.social-icons {
+    display: flex;
+    gap: 20px; /* Adjust space between icons */
 }
 
-.social-links a {
-    margin-right: 15px;
-    text-decoration: none;
+.social-icons i {
+    font-size: 24px; /* Set the default icon size */
+    transition: transform 0.3s ease; /* Optional: for smooth hover effect */
 }
 
-.social-links .icon {
-    width: 32px;
-    height: 32px;
-    transition: transform 0.3s ease;
+.github-icon i {
+    font-size: 24px; /* Match GitHub icon size to LinkedIn */
 }
 
-.social-links .icon:hover {
-    transform: scale(1.2);
+.linkedin-icon i {
+    font-size: 24px; /* Match LinkedIn icon size to GitHub */
 }
+
+/* Optional: Hover effect */
+.social-icons a:hover i {
+    transform: scale(1.2); /* Slightly enlarge the icon on hover */
+}
+
 
 /* Invited Talks Section Styles */
 #talks {
@@ -118,7 +123,7 @@ footer {
 #home {
     width: 100%;
     height: 100vh;
-    background-image: url('images/background.jpg'); /* Your background image */
+    background-image: url('images/background.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -126,12 +131,27 @@ footer {
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    text-align: center;
+}
 
+.profile {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.profile-image {
+    width: 150px; /* Adjust width of your profile image */
+    height: 150px; /* Adjust height of your profile image */
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image fits properly */
+    border: 5px solid white; /* Optional: adds a white border around the profile picture */
+    margin-bottom: 20px; /* Adds space below the image */
+}
 
 .carousel {
     display: flex;
-    width: 300%; /* 100% for each image, so three images in total */
-    animation: slide 15s infinite; /* Slide every 15 seconds */
+    width: 300%;
+    animation: slide 15s infinite;
 }
 
 .carousel-image {
@@ -152,5 +172,4 @@ footer {
     100% {
         transform: translateX(0);
     }
-}
 }
