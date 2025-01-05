@@ -6,14 +6,14 @@ body {
 }
 
 header {
-    background: #333;
+    background: #402172;
     color: #fff;
     padding: 10px 20px;
 }
 
 header h1 {
     margin: 0;
-    font-size: 24px;
+    font-size: 30px;
 }
 
 header nav ul {
@@ -28,22 +28,24 @@ header nav ul li a {
     color: #fff;
     text-decoration: none;
     padding: 5px 10px;
+    font-size: 20px; 
 }
 
 header nav ul li a:hover {
     background: #444;
 }
 
+
 main {
-    padding: 20px;
+    padding: 24px;
 }
 
 section {
-    margin-bottom: 20px;
+    margin-bottom: 32px;
 }
 
 section h2 {
-    font-size: 22px;
+    font-size: 24px;
     border-bottom: 2px solid #333;
     padding-bottom: 5px;
 }
@@ -58,15 +60,18 @@ footer {
     width: 100%;
 }
 
+
 /* Contact Section Styles */
 .social-icons {
     display: flex;
-    gap: 20px; /* Adjust space between icons */
+    gap: 50px; /* Adjust space between icons */
+    justify-content: center;
 }
 
 .social-icons i {
     font-size: 24px; /* Set the default icon size */
     transition: transform 0.3s ease; /* Optional: for smooth hover effect */
+    color: #5b3794;
 }
 
 .github-icon i {
@@ -87,8 +92,9 @@ footer {
 #talks {
     margin: 20px auto;
     padding: 10px;
-    max-width: 800px;
+    max-width: 1000px;
     line-height: 1.8;
+    justify-content:space-evenly;
 }
 
 #talks h2 {
@@ -133,40 +139,252 @@ footer {
 
 .profile {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 32px;
+    color: #402172;
 }
 
 .profile-image {
-    width: 300px; /* Adjust width of your profile image */
-    height: 300px; /* Adjust height of your profile image */
+    width: 250px; /* Adjust width of your profile image */
+    height: 250px; /* Adjust height of your profile image */
     border-radius: 50%; /* Makes the image circular */
-    object-fit: cover; /* Ensures the image fits properly */
-    border: 5px solid green; /* Optional: adds a white border around the profile picture */
+    object-fit: contain; /* Ensures the image fits properly */
+    border: 5px solid #402172; /* Optional: adds a white border around the profile picture */
     margin-bottom: 20px; /* Adds space below the image */
 }
 
-.carousel {
+#education {
+    margin-bottom: 80px;
+}
+
+/* Timeline container */
+#timeline {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Title of the timeline section */
+#timeline h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+/* Timeline container and items */
+.timeline {
+    position: relative;
+    padding: 0;
+    list-style: none;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Timeline item styling */
+.timeline-item {
     display: flex;
-    width: 300%;
-    animation: slide 15s infinite;
+    align-items: center;
+    margin-bottom: 30px;
+    position: relative;
 }
 
-.carousel-image {
+/* Date on the vertical line */
+.timeline-date {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #402172;
+    padding: 10px;
+    border-radius: 60%;
+    border: 2px solid #402172;
+    position: absolute;
+    left: 0%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+/* Vertical line that runs through the timeline */
+.timeline:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0%;
+    width: 2px;
+    height: 100%;
+    border-radius: 60%;
+    background-color: #836fa1;
+    transform: translateX(-50%);
+}
+
+/* Content for each timeline item */
+.timeline-content {
+    margin-left: 20px;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
-    height: auto;
 }
 
-@keyframes slide {
-    0% {
-        transform: translateX(0);
-    }
-    33.33% {
-        transform: translateX(-100%);
-    }
-    66.66% {
-        transform: translateX(-200%);
-    }
-    100% {
-        transform: translateX(0);
-    }
+/* Styling for odd and even items to alternate sides */
+.timeline-item:nth-child(odd) .timeline-content {
+    margin-left: 40px;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    margin-right: 40px;
+}
+
+.timeline-content h3 {
+    margin-top: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.timeline-content p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+/* Hover effect for timeline content */
+.timeline-item:hover .timeline-content {
+    background-color: #e9e9e9;
+    cursor: pointer;
+}
+
+/* Header for each timeline item */
+.timeline-header {
+    margin-bottom: 10px;
+}
+
+.timeline-header h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #402172;
+    margin: 0;
+}
+
+.timeline-header .place {
+    font-size: 16px;
+    color: #5f4b8b; /* Lighter purple for the place */
+    margin-top: 5px;
+}
+
+/* Bullet points inside timeline items */
+.timeline-bullets {
+    list-style-type: disc;
+    margin-left: 20px;
+    font-size: 16px;
+}
+
+.timeline-bullets li {
+    margin-bottom: 8px;
+}
+
+
+/* General page styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Research section styling */
+#research {
+    max-width: 960px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #e3e2e7;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 80px;
+}
+
+/* Title of the research section */
+#research h2 {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 30px;
+    color: #402172;
+}
+
+/* Research Grid Styling */
+#research {
+    padding: 40px;
+    background-color: #f8f8f8;
+}
+
+.research-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.research-tile {
+    background-color: #402172;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.research-tile iframe {
+    width: 100%;
+    height: 200px;
+}
+
+video {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.tile-description {
+    padding: 10px 15px;
+    background-color: #402172;
+    color: #fff;
+    text-align: center;
+}
+
+.tile-description h3 {
+    font-size: 18px;
+    margin: 0 0 5px;
+    color: #f4f4f4;
+}
+
+.tile-description p {
+    font-size: 14px;
+    margin: 0;
+    color: #dcdcdc;
+}
+
+/* Hover effect for the tiles */
+.research-tile:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+/* Ensure YouTube embeds fit well within the tile */
+iframe {
+    width: 400px;
+    height: 225px;
+    border: none;
+}
+
+.link-to-research {
+    color: #402172;
+    text-decoration: underline;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.link-to-research:hover {
+    color: #5e3a94;
 }
